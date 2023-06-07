@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="30000">
+       <KeyFrameSet/>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/progressTime"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            motion:layout_constraintTop_toBottomOf="@id/viewScore"
+            motion:layout_constraintStart_toStartOf="parent"></Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/progressTime"
+            android:layout_width="1dp"
+            android:layout_height="12dp"
+            motion:layout_constraintTop_toBottomOf="@id/viewScore"
+            motion:layout_constraintStart_toStartOf="parent" ></Constraint>
+    </ConstraintSet>
+</MotionScene>
